@@ -155,6 +155,7 @@
 
   .image-slider {
     max-width: 80vw;
+    background: center/cover;
   }
 
   .product-sub {
