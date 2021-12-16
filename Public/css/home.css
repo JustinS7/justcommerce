@@ -1,0 +1,257 @@
+@import "nav.css";
+@import "footer.css";
+@import "product.css";
+@import "search.css";
+
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background: url("/Public/img/waterdress.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .brandlogo {
+  font-size: 6rem;
+  font-weight: 500;
+  margin-bottom: 154px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Product */
+
+.product {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.product-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.product-container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 100px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.product-thumb {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(155, 53, 70);
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 50%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.product-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: rgba(211, 209, 209, 0.959);
+}
+
+.product-info {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.product-brand {
+  text-transform: uppercase;
+}
+
+.product-short-des {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.pre-btn i,
+.nxt-btn i {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn i {
+  left: 0;
+}
+
+.fas2 {
+  right: 0;
+}
+
+.pre-btn i,
+.nxt-btn i {
+  opacity: 0.2;
+}
+
+.pre-btn:hover i,
+.nxt-btn:hover i {
+  opacity: 1;
+}
+
+/* ==== Gallery Collections */
+
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.collection {
+  position: relative;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  text-align: center;
+  color: whitesmoke;
+  font-size: 80px;
+  text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 20px;
+  max-height: 400px;
+}
+
+@media (max-width: 1024px) and (min-width: 1000px) {
+  .search {
+    display: none;
+  }
+
+  .navbar .brandlogo {
+    position: relative;
+    font-size: 4rem;
+    top: 0;
+    left: 110px;
+    margin-bottom: 20px;
+  }
+  .gallery-container p {
+    font-size: 4rem;
+    left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: 13px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .hero-section h1 {
+    display: none;
+  }
+
+  .gallery-container p {
+    font-size: 2.5rem;
+    left: 0;
+  }
+
+  .category {
+    display: none;
+  }
+
+  .social-link {
+    display: none;
+  }
+}
